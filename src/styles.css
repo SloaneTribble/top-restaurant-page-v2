@@ -1,0 +1,22 @@
+html,
+body{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex: 1;
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+    max-width: 100%;
+    margin: 0;
+    font-family: 'Abril Fatface', cursive;
+}
+
+body{
+    background: #f0be61;
+}
