@@ -11,19 +11,27 @@ function makePageChanger(buttonName){
     }
 }
 
+function checkForContainer(sectionName){
+    const containerName = `${sectionName}-container`;
+    return document.getElementsByClassName(containerName).length > 0;
+}
+
 function loadPage(){
     const contentDiv = document.getElementById("content");
 
     const nav = document.getElementById("nav");
 
     let navButtons = nav.querySelectorAll("button");
-    console.log(navButtons);
 
     navButtons.forEach((button) => {
-        console.log(button);
         button.addEventListener("click", (e) => {
             const buttonId = e.target.id;
-            console.log(e.target.id);
+            console.log(buttonId);
+
+            console.log(buttonId.split("-"));
+            const sectionName = buttonId.split("-")[0];
+            console.log("Section name:", sectionName);
+            console.log(checkForContainer(sectionName));
 
             const pageChangeFunction = makePageChanger(buttonId);
             contentDiv.replaceChildren(pageChangeFunction());
