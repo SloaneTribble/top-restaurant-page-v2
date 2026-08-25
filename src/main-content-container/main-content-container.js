@@ -1,5 +1,7 @@
-import {homeMaker} from "../home/home.js";
-import {menuMaker} from "../menu/menu.js";
+import { homeMaker } from "../home/home.js";
+import { menuMaker } from "../menu/menu.js";
+import { aboutMaker } from "../about/about.js";
+import { contactMaker } from "../contact/contact.js";
 
 function makePageChanger(buttonName){
     switch (buttonName){
@@ -7,9 +9,15 @@ function makePageChanger(buttonName){
 
         case "menu-button": return menuMaker;
 
+        case "about-button": return aboutMaker;
+
+        case "contact-button": return contactMaker;
+
         default: console.log("No such button");
     }
 }
+
+
 
 function checkForContainer(sectionName){
     const containerName = `${sectionName}-container`;
@@ -33,29 +41,16 @@ function loadPage(){
             console.log("Section name:", sectionName);
             console.log(checkForContainer(sectionName));
 
+            // if container is already present, do nothing 
+            if(checkForContainer(sectionName)){
+                return;
+            }
+
             const pageChangeFunction = makePageChanger(buttonId);
             contentDiv.replaceChildren(pageChangeFunction());
         })
     });
 
-    // const homeButton = document.getElementById("home-button");
-    // homeButton.addEventListener("click", () => {
-    //     if (document.getElementsByClassName("home-container").length > 0){
-    //         return;
-    //     }
-    //     contentDiv.replaceChildren(homeMaker());
-    // });
-
-    // const menuButton = document.getElementById("menu-button");
-    // menuButton.addEventListener("click", () => {
-    //     if (document.getElementsByClassName("menu-container").length > 0){
-    //         return;
-    //     }
-    //     contentDiv.replaceChildren(menuMaker());
-    // });
-
-    // const aboutButton = document.getElementById("about-button");
-    // const contactButton = document.getElementById("contact-button");
 
     contentDiv.appendChild(homeMaker());
 
