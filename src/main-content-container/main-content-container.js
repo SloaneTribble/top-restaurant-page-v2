@@ -13,10 +13,9 @@ function makePageChanger(buttonName){
 
         case "contact-button": return contactMaker;
 
-        default: console.log("No such button");
+        default: console.error("No such button");
     }
 }
-
 
 
 function checkForContainer(sectionName){
