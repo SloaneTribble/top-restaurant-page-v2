@@ -51,7 +51,7 @@ function loadPage(){
     });
 
 
-    contentDiv.appendChild(homeMaker());
+    contentDiv.appendChild(menuMaker());
 
     return contentDiv;
 }

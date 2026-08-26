@@ -12,7 +12,6 @@
 import "./styles.css";
 import { loadPage } from "./main-content-container/main-content-container.js";
 
-console.log("Hello from index.js!");
 
 loadPage();
 
