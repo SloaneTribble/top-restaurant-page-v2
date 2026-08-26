@@ -1,3 +1,10 @@
 .menu-container {
-    background: purple;
+    background: var(--menu-bg-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item{
+    margin: 1rem;
+
 }

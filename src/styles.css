@@ -1,32 +1,45 @@
+:root{
+  --home-bg-color: aqua;
+  --menu-bg-color: coral;
+  --about-bg-color: rgb(28, 183, 59);
+  --contact-bg-color: rgb(255, 68, 43);
+
+}
+
 html,
 body{
     box-sizing: border-box;
 }
 
+
+
 body{
-    min-height: 100vh;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+    background-color: #f0be61;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
+
 *,
 *:before,
 *:after{
     box-sizing: inherit;
     max-width: 100%;
     margin: 0;
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Lobster Two', sans-serif;
 }
 
-body{
-    background-color: #f0be61;
+.wrapper{
+   min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 nav{
     width: 100vw;
     display: flex;
     flex-direction: row;
-    padding: .2rem;
+    padding: .7rem 0;
     justify-content: center;
 }
 
@@ -35,16 +48,40 @@ button{
     max-width: 20vw;
 }
 
+#home-button{
+    background-color: var(--home-bg-color);
+}
+#menu-button{
+    background-color: var(--menu-bg-color);
+}
+#about-button{
+    background-color: var(--about-bg-color);
+}
+#contact-button{
+    background-color: var(--contact-bg-color);
+}
+
+[class*="container"]{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    min-height: 60vh;
+    min-width: 100%;
+    padding: 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgb(255, 230, 234);
+    border: solid black .2rem;
+
+}
+
 
 
 /* CSS */
 .button-53 {
-  background-color: #3DD1E7;
   border: 0 solid #E5E7EB;
   box-sizing: border-box;
   color: #000000;
   display: flex;
-  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 1rem;
   font-weight: 700;
   justify-content: center;
@@ -55,7 +92,6 @@ button{
   text-decoration: none #000000 solid;
   text-decoration-thickness: auto;
   position: relative;
-  cursor: pointer;
   transform: rotate(-2deg);
   user-select: none;
   -webkit-user-select: none;
@@ -86,4 +122,19 @@ button{
     padding: .75rem 3rem;
     font-size: 1.25rem;
   }
+}
+
+footer {
+  min-height: 50px;
+  background: rgb(164, 162, 158);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.github-logo {
+    height: 1em;
+    width: auto;
 }

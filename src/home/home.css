@@ -1,3 +1,5 @@
 .home-container{
-    background: blue;
+    background: var(--home-bg-color);
+
+
 }
