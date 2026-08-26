@@ -4,7 +4,20 @@
     flex-direction: column;
 }
 
+#menu-title{
+    font-size: 1.3rem;
+}
+
 .menu-item{
     margin: 1rem;
+}
 
+.menu-item-name, .menu-item-price{
+    font-weight: bold;
+}
+
+.menu-item-description{
+    font-style: italic;
+    padding: .1rem;
+    font-size: 1.05rem;
 }

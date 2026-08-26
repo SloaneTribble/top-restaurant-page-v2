@@ -33,12 +33,8 @@ function loadPage(){
     navButtons.forEach((button) => {
         button.addEventListener("click", (e) => {
             const buttonId = e.target.id;
-            console.log(buttonId);
 
-            console.log(buttonId.split("-"));
             const sectionName = buttonId.split("-")[0];
-            console.log("Section name:", sectionName);
-            console.log(checkForContainer(sectionName));
 
             // if container is already present, do nothing 
             if(checkForContainer(sectionName)){
@@ -51,7 +47,7 @@ function loadPage(){
     });
 
 
-    contentDiv.appendChild(menuMaker());
+    contentDiv.appendChild(homeMaker());
 
     return contentDiv;
 }

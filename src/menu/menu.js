@@ -39,8 +39,10 @@ function menuMaker() {
 
 
     const menuTitle = document.createElement("div");
+    menuTitle.id = "menu-title";
     menuTitle.textContent = "Menu";
     menuContainer.appendChild(menuTitle);
+    
 
     for (const item of menuItems){
         const menuItem = makeMenuItemDiv(item);

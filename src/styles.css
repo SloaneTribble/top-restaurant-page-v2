@@ -3,7 +3,7 @@
   --menu-bg-color: coral;
   --about-bg-color: rgb(28, 183, 59);
   --contact-bg-color: rgb(255, 68, 43);
-
+  cursor: url('./images/dip_32x32.jpg'), auto;
 }
 
 html,
@@ -11,11 +11,9 @@ body{
     box-sizing: border-box;
 }
 
-
-
 body{
     background-color: #f0be61;
-    min-height: 100%;
+    height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
@@ -29,10 +27,10 @@ body{
     font-family: 'Lobster Two', sans-serif;
 }
 
-.wrapper{
-   min-height: 100%;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+#page-title{
+  text-align: center;
+  padding: .5rem;
+  font-size: 1.5rem;
 }
 
 nav{
@@ -43,7 +41,13 @@ nav{
     justify-content: center;
 }
 
-button{
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
     cursor: url('./images/dip_32x32.jpg'), auto;
     max-width: 20vw;
 }
@@ -61,17 +65,21 @@ button{
     background-color: var(--contact-bg-color);
 }
 
+
+
 [class*="container"]{
     display: flex;
-    justify-self: center;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     min-height: 60vh;
-    min-width: 100%;
+    min-width: 60vw;
+    max-width: 60vw;
     padding: 2rem;
     text-align: center;
     text-shadow: 1px 1px 2px rgb(255, 230, 234);
     border: solid black .2rem;
-
+    margin-top: 2rem;
 }
 
 
@@ -125,13 +133,15 @@ button{
 }
 
 footer {
-  min-height: 50px;
+  min-height: 2rem;
+  width: 100%;
   background: rgb(164, 162, 158);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  position: fixed;
+  bottom: 0;
 }
 
 .github-logo {

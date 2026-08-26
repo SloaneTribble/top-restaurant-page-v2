@@ -1,3 +1,20 @@
 .about-container {
     background: var(--about-bg-color);
 }
+
+#about-title, #about-text {
+    background-color: rgba(0, 0, 0, 0.108);
+    margin: 1rem;
+}
+
+#about-title {
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+#about-text {
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
